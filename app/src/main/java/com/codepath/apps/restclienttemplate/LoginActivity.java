@@ -24,7 +24,7 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 		sampleModel.setName("CodePath");
 
 		sampleModelDao = ((TwitterApp) getApplicationContext()).getMyDatabase().sampleModelDao();
-
+        //AsyncTask allows us to keep applications like this in the background and not on the main thread.
 		AsyncTask.execute(new Runnable() {
 			@Override
 			public void run() {
